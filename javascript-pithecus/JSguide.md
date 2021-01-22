@@ -35,6 +35,15 @@
 JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
 The `<script>` tag contains JavaScript code which is automatically executed when the browser processes the tag.
 
+### order of <script> in html
+the order is important also in html. actually we can use export, but when we don't use ES6, we should bring the exporting js file first, and then importing js file.
+
+```html
+<script src="variables.js"></script>
+
+<script src="using.js"></script>
+```
+
 ## 0-3. DOM (: Document Object Module)
 
 ### document
@@ -494,6 +503,17 @@ str.substr(5, 5); // "gorea"
 var myStr = "hi" + "wonseok"; // "hiwonseok"
 myStr += " nice"; // "hiwonseok nice"
 var fullStr = myStr + " to meet you"; // "hiwonseok nice to meet you"
+```
+
+### parseInt
+```js
+parseInt("123")
+// 123
+```
+### eval
+```js
+eval("10*9")
+// 90
 ```
 
 ## 1-4. Boolan

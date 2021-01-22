@@ -27,4 +27,17 @@ require or import: importing 'express' folder from the node_modules. then, wtf i
 2. `npm install express` <br> downloading express.js and  making node_modules in my folder. 
 3. node_modules <br> the location where your packages live in. after `npm install`, you can import any of them you installed. `dependencies` shows the core packages that you installed. it's how our project survive.
 4. package.json <br> Is a file where I save information about my project and the packages it needs to run. later, when you share your codes with others, you don't have to send the whole node_modules folder. instead, just sending package.json and `npm i`. then it will automatically downloaded according to dependencies.
-## insights 
+
+
+### babel
+1. `npm i @babel/core @babel/node @babel/cli @babel/preset-env --save-dev`
+2. `npm i core-js@3`
+3. in the package.json, `"start":"babel-node index.js"`
+4. make a .babelrc file :  {
+"presets": [["@babel/preset-env",
+{"useBuiltIns": "entry",
+"corejs":3}]]}
+
+### nodemon
+1. `npm i nodemon -D`
+2. in the package.json, `"start": "nodemon --legacy-watch --exec babel-node index.js --delay 2"`
