@@ -595,6 +595,16 @@ arr1.unshift("Come back!");
   is capable of <mark>storing multiple values</mark> as properties.
   One of the best things about objects is that we can store a **function** as one of its properties.
 
+### Array.from()
+The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+
+```js
+Array.from("foo")
+// ["f", "o", "o"]
+Array.from([1, 2, 3], x => x + x)
+// [2, 4, 6]
+```
+
 ## functions including object
 
 ```js
@@ -920,11 +930,31 @@ bar(10);
 
 ## Switch
 
+
 ### meaning
 
 If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a `break` is encountered.
 
 `case` values are tested with strict equality (`===`). The `break` tells JavaScript to stop executing statements.
+
+### usage
+
+```js
+const expr = 'Mangoes';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+        break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+
+```
 
 ```js
 function caseInSwitch(val) {
